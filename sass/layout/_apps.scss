@@ -1,0 +1,54 @@
+
+
+.apps {
+    text-align: center;
+    padding-top: 110px;
+    padding-bottom: 105px;
+
+    &-title {
+        @include property(36px, 700, Montserrat, $main-color);
+        max-width: 730px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &-desc {
+        @include property(16px, 400, Montserrat, $desc-color);
+        padding-top: 32px;
+        padding-bottom: 70px;
+        max-width: 730px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &-list {
+        @include flex(flex, center, center, 27px);
+        text-align: left;
+        margin-bottom: 55px;
+
+        &-item {
+            max-width: 353px;
+            width: 100%;
+            @include flex(flex, space-between, center, 17px);
+
+            &-wrap-first {
+                max-width: 110px;
+                width: 100%;
+                margin-bottom: 29px;
+            }
+            &-wrap-second {
+                @include flex(flex, flex-end, flex-start, 12px);
+                flex-direction: column;
+                max-width: 226px;
+                width: 100%;
+                margin-top: 46px;
+
+                .apps-list-title {
+                    @include property(18px, 600, Montserrat, $main-color);
+                }
+                .apps-list-desc {
+                    @include property(14px, 400, Montserrat, $desc-color);
+                }
+            }
+        }
+    }
+}

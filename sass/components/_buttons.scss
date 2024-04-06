@@ -1,0 +1,18 @@
+
+// hero
+
+.hero-btn {
+    @include property(16px, 500, Montserrat, $white-color);
+    background-color: $hover-color;
+    padding: 14px 36px 14px 36px;
+    border-radius: 30px;
+}
+
+// apps
+
+.apps-btn {
+    @include property(16px, 500, Montserrat, $white-color);
+    background-color: $hover-color;
+    padding: 14px 36px 14px 36px;
+    border-radius: 30px;
+}

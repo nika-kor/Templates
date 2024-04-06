@@ -1,0 +1,61 @@
+
+
+
+.high {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    background-color: #F6F6F8;
+    
+    &-wrap {
+        @include flex(flex, space-between, center, 39px);
+        margin-bottom: 90px;
+
+        &-title {
+            max-width: 489px;
+            width: 100%;
+
+            .high-title {
+                @include property(36px, 700, Montserrat, $main-color);
+            }
+            .high-desc {
+                @include property(16px, 400, Montserrat, $desc-color);
+                margin-top: 60px;
+                margin-bottom: 42px;
+            }
+            .high-link {
+                @include property(16px, 500, Montserrat, $hover-color);
+                text-decoration: underline;
+            }
+        }
+
+        .high-img {
+            max-width: 500px;
+            width: 100%;
+            min-height: 400px;
+            height: 100%;
+            border-radius: 30px;
+        }
+    }
+
+    &-list {
+        @include flex(flex, center, center, 100px);
+        padding-top: 70px;
+        border-top: 1px solid #E0E0E0;
+
+        &-item {
+            @include flex(flex, center, center, 17px);
+            flex-direction: column;
+
+            .high-list-item-wrap {
+                @include flex(flex, center, center, 20px);
+
+                .high-list-item-desc {
+                    @include property(36px, 400, Montserrat, $main-color);
+                }
+            }
+            &-desc {
+                @include property(16px, 400, Montserrat, $desc-color);
+            }
+        }
+    }
+}

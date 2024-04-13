@@ -1,17 +1,60 @@
 
 .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.5), rgba(47, 48, 58, 0.5)), url(../../image/bkg.jpg);
-    padding-top: 319px;
-    padding-bottom: 335px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../image/bkg.jpg);
     text-align: center;
     background-size: cover;
 
     &-desc {
-        @include property(16px, 500, Montserrat, $white-color);
+        @include property(_, 500, Montserrat, $white-color);
     }
     &-title {
-        @include property(48px, 800, Montserrat, $white-color);
+        @include property(_, 800, Montserrat, $white-color);
+        margin: 0 auto;
         margin-top: 20px;
         margin-bottom: 50px;
+    }
+}
+
+@include phone(767px) {
+    .hero {
+        padding-top: 200px;
+        padding-bottom: 200px;
+
+        &-desc {
+            font-size: 16px
+        }
+        &-title {
+            font-size: 30px;
+        }
+    }
+}
+
+@include tab (768px) {
+    .hero {
+        padding-top: 200px;
+        padding-bottom: 170px;
+
+        &-desc {
+            font-size: 16px
+        }
+        &-title {
+            font-size: 30px;
+            max-width: 500px;
+        }
+    }
+}
+
+@include desc(1200px) {
+    .hero {
+        padding-top: 319px;
+        padding-bottom: 335px;
+
+        &-desc {
+            font-size: 16px
+        }
+        &-title {
+            font-size: 48px;
+            max-width: 829px;
+        }
     }
 }

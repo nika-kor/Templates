@@ -1,0 +1,32 @@
+
+
+.projects {
+    padding-top: 100px;
+    padding-bottom: 130px;
+    text-align: center;
+    background-color: #F6F6F8;
+
+   &-title {
+        @include property(36px, 700, Montserrat, #000000);
+   }
+
+   &-desc {
+        @include property(16px, 400, Montserrat, $desc-color);
+        max-width: 730px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 80px;
+   }
+
+   &-img-wrap {
+        @include flex(flex, space-between, center, 30px);
+        margin-bottom: 50px;
+        .projects-img {
+            max-width: 255px;
+            width: 100%;
+            min-height: 230px;
+            border-radius: 10px;
+        }
+   }
+}

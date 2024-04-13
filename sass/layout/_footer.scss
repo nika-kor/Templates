@@ -1,0 +1,46 @@
+
+footer {
+    background-color: #F6F6F8;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    .footer-list {
+        @include flex(flex, space-between, _, 40px);
+
+        .footer-list-item {
+            &-tile {
+                @include property(18px, 600, Montserrat, #000000);
+                margin-bottom: 35px;
+            }
+            .addres-list {
+                @include flex(flex, center, flex-start, 30px);
+                flex-direction: column;
+                &-item {
+                    @include property(14px, 400, Montserrat, $desc-color);
+                    @include flex(flex, center, center, 15px);
+                    transition: all 0.5s;
+                    &:hover {
+                        color: #696868;
+                    }
+                    svg {
+                        fill: currentColor;
+                    }
+                }
+            }
+        }
+        &-second {
+            @include flex(flex, center, flex-start, 30px);
+            flex-direction: column;
+            &-item {
+                @include property(14px, 400, Montserrat, $desc-color);
+                @include flex(flex, center, center, 15px);
+                transition: all 0.5s;
+                &:hover {
+                    color: #696868;
+                }
+                svg {
+                    fill: currentColor;
+                }
+            }
+        }
+    }
+}

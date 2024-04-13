@@ -1,0 +1,43 @@
+
+
+.subscribe {
+    padding-top: 85px;
+    padding-bottom: 85px;
+    text-align: center;
+
+    &-title {
+        @include property(18px, 600, Montserrat, #000000);
+    }
+    &-desc {
+        @include property(16px, 400, Montserrat, $desc-color);
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    &-form {
+        max-width: 489px;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px 0px #6F6F6F40;
+        @include flex(flex, space-between, center, 20px);
+        padding-left: 33px;
+
+        &-input {
+            border: none;
+            // max-width: 280px;
+            // width: 100%;
+            color: #999999;
+
+            &:focus-visible {
+                outline: none;
+                color: #000000
+            }
+        }
+    }
+
+    &-desc-second {
+        @include property(13px, 400, Montserrat, $desc-color);
+        margin-top: 35px;
+    }
+}

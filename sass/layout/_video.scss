@@ -1,0 +1,41 @@
+
+
+.video {
+    padding-top: 70px;
+    text-align: center;
+    background-image: url(../../image/video-bkg.png);
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+
+    &-title {
+        @include property(36px, 700, Montserrat, $white-color);
+    }
+    &-desc {
+        @include property(16px, 400, Montserrat, $white-color);
+        margin-top: 30px;
+        margin-bottom: 70px;
+    }
+
+    &-wrap {
+        position: relative;
+        padding-bottom: 85px;
+        border-bottom: 1px solid #E0E0E0;
+        .video-img {
+            max-width: 970px;
+            width: 100%;
+            height: 430px;
+            margin: 0 auto;
+            border-radius: 10px;
+            
+
+        }
+        .video-svg {
+            outline: 1px solid $white-color;
+            border-radius: 200px;
+            position: absolute;
+            top: 165px;
+            right: 390px;
+            cursor: pointer;
+        }
+    }
+}

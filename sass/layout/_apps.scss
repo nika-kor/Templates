@@ -13,8 +13,8 @@
     }
     &-desc {
         @include property(16px, 400, Montserrat, $desc-color);
-        padding-top: 32px;
-        padding-bottom: 70px;
+        // padding-top: 32px;
+        // padding-bottom: 70px;
         max-width: 730px;
         width: 100%;
         margin: 0 auto;
@@ -31,9 +31,19 @@
             @include flex(flex, space-between, center, 17px);
 
             &-wrap-first {
-                max-width: 110px;
-                width: 100%;
+                @include flex(flex, center, center, _);
+                // max-width: 110px;
+                // width: 100%;
+                padding: 10px;
                 margin-bottom: 29px;
+                outline: 1px solid #E0E0E0;
+                border-radius: 50%;
+
+                &-svg {
+                    padding: 25px;
+                    outline: 1px solid $hover-color;
+                    border-radius: 50%;
+                }
             }
             &-wrap-second {
                 @include flex(flex, flex-end, flex-start, 12px);
@@ -49,6 +59,32 @@
                     @include property(14px, 400, Montserrat, $desc-color);
                 }
             }
+        }
+    }
+}
+
+@include phone(767px) {
+    .apps {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        &-title {
+            font-size: 30px;
+        }
+        &-desc {
+            font-size: 14px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .apps-list-item-wrap-first-svg {
+            padding: 15px;
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .apps-list-item {
+            @include flex(flex, center, center, 17px);
         }
     }
 }

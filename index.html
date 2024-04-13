@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Templates</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,14 +19,36 @@
         <div class="wrap">
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="" class="nav-list-link active">Головна</a></li>
-                    <li><a href="" class="nav-list-link">Наші проекти</a></li>
-                    <li><a href="" class="nav-list-link">Послуги</a></li>
+                    <li><a href="./index.html" class="nav-list-link active">Головна</a></li>
+                    <li><a href="#projects" class="nav-list-link">Наші проекти</a></li>
+                    <li><a href="#apps" class="nav-list-link">Послуги</a></li>
                     <li><a href="" class="nav-list-link">Новини</a></li>
                     <li><a href="" class="nav-list-link">Контакти</a></li>
                 </ul>
             </nav>
+
+            <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg width="40" height="32"><use href="./symbol-defs.svg#burger"></use></svg>
+            </button>
         </div>
+
+         <!-- mobile -->
+
+         <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu">
+                <svg width="30" height="30"><use href="./symbol-defs.svg#close"></use></svg>
+            </button>
+    
+            <ul class="mobile-menu">
+                <li><a href="./index.html" class="link active">Головна</a></li>
+                <li><a href="#projects" class="link">Наші проекти</a></li>
+                <li><a href="#apps" class="link">Послуги</a></li>
+                <li><a href="" class="link">Новини</a></li>
+                <li><a href="" class="link">Контакти</a></li>
+            </ul>
+
+        </div>
+
     </header>
 
     <!-- main -->
@@ -45,14 +67,16 @@
 
         <!-- apps -->
 
-        <section class="apps">
+        <section class="apps" id="apps">
             <div class="wrap">
                 <h2 class="apps-title">Ми створюємо мобільні додатки для великих корпорацій</h2>
                 <p class="apps-desc">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
                 <ul class="apps-list">
                     <li class="apps-list-item">
                         <div class="apps-list-item-wrap-first">
-                            <svg width="100" height="100"><use href="./symbol-defs.svg#Ellipse"></use></svg>
+                            <div class="apps-list-item-wrap-first-svg">
+                                <svg width="40" height="40"><use href="./symbol-defs.svg#Ellipse"></use></svg>
+                            </div>
                         </div>
                         <div class="apps-list-item-wrap-second">
                             <h5 class="apps-list-title">Створення сайтів</h5>
@@ -62,7 +86,9 @@
 
                     <li class="apps-list-item">
                         <div class="apps-list-item-wrap-first">
-                            <svg width="110" height="110"><use href="./symbol-defs.svg#Ellipse"></use></svg>
+                            <div class="apps-list-item-wrap-first-svg">
+                                <svg width="40" height="40"><use href="./symbol-defs.svg#Ellipse"></use></svg>
+                            </div>
                         </div>
                         <div class="apps-list-item-wrap-second">
                             <h5 class="apps-list-title">Створення сайтів</h5>
@@ -72,7 +98,9 @@
 
                     <li class="apps-list-item">
                         <div class="apps-list-item-wrap-first">
-                            <svg width="110" height="110"><use href="./symbol-defs.svg#Ellipse"></use></svg>
+                            <div class="apps-list-item-wrap-first-svg">
+                                <svg width="40" height="40"><use href="./symbol-defs.svg#Ellipse"></use></svg>
+                            </div>
                         </div>
                         <div class="apps-list-item-wrap-second">
                             <h5 class="apps-list-title">Створення сайтів</h5>
@@ -149,30 +177,30 @@
         <section class="works">
             <div class="wrap">
                 <div class="works-wrap">
-                    <h2 class="works-title">Наші роботи на яких ми спеціалізуємось</h2>
-                    <button class="works-btn">Всі послуги</button>
+                    <h2 class="works-wrap-title">Наші роботи на яких ми спеціалізуємось</h2>
+                    <button class="works-wrap-btn">Всі послуги</button>
                 </div>
 
                 <ul class="works-list">
                     <li class="works-list-item">
-                        <img src="./image/works.jpg" alt="" class="works-img">
-                        <h5 class="works-list-title"><span class="span">01.</span> Дослідження і упаковка</h5>
-                        <p class="works-list-desc">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
-                        <a href="" class="works-list-link">Детальніше</a>
+                        <img src="./image/works.jpg" alt="" class="works-list-item-img">
+                        <h5 class="works-list-item-title"><span class="span">01.</span> Дослідження і упаковка</h5>
+                        <p class="works-list-item-desc">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
+                        <a href="" class="works-list-item-link">Детальніше</a>
                     </li>
 
                     <li class="works-list-item">
-                        <img src="./image/works.jpg" alt="" class="works-img">
-                        <h5 class="works-list-title"><span class="span">01.</span> Дослідження і упаковка</h5>
-                        <p class="works-list-desc">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
-                        <a href="" class="works-list-link">Детальніше</a>
+                        <img src="./image/works.jpg" alt="" class="works-list-item-img">
+                        <h5 class="works-list-item-title"><span class="span">01.</span> Дослідження і упаковка</h5>
+                        <p class="works-list-item-desc">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
+                        <a href="" class="works-list-item-link">Детальніше</a>
                     </li>
 
                     <li class="works-list-item">
-                        <img src="./image/works.jpg" alt="" class="works-img">
-                        <h5 class="works-list-title"><span class="span">01.</span> Дослідження і упаковка</h5>
-                        <p class="works-list-desc">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
-                        <a href="" class="works-list-link">Детальніше</a>
+                        <img src="./image/works.jpg" alt="" class="works-list-item-img">
+                        <h5 class="works-list-item-title"><span class="span">01.</span> Дослідження і упаковка</h5>
+                        <p class="works-list-item-desc">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
+                        <a href="" class="works-list-item-link">Детальніше</a>
                     </li>
                 </ul>
             </div>
@@ -180,7 +208,7 @@
 
         <!-- projects -->
 
-        <section class="projects">
+        <section class="projects" id="projects">
             <div class="wrap">
                 <h2 class="projects-title">Наші проекти</h2>
                 <p class="projects-desc">Lorem Ipsum - це текст-"риба", що часто використовується в пресі та веб-дизайні. Lorem Ipsum є стандартною "рибою" для текстів на латиниці з початку XVI ст.</p>
@@ -215,10 +243,10 @@
         <section class="subscribe">
             <div class="wrap">
                 <h2 class="subscribe-title">Підпишіться на нашу розсилку</h2>
-                <p class="sunscribe-desc">Корисні статті, акції, новини - отримайте все це зараз!</p>
+                <p class="subscribe-desc">Корисні статті, акції, новини - отримайте все це зараз!</p>
                 <form action="" class="subscribe-form">
-                    <input type="text" placeholder="Ваш e-mail" class="subscribe-input">
-                    <button class="subscribe-btn">Підписатися</button>
+                    <input type="text" placeholder="Ваш e-mail" class="subscribe-form-input">
+                    <button class="subscribe-form-btn">Підписатися</button>
                 </form>
 
                 <p class="subscribe-desc-second">Ми не шлем спам, і не передаємо нікому ваші дані</p>
@@ -236,14 +264,14 @@
 
                 <li class="footer-list-item">
 
-                    <h5 class="footer-list-tile">Контактна інформація</h5>
+                    <h5 class="footer-list-item-tile">Контактна інформація</h5>
 
                     <address class="footer-addres">
 
                         <ul class="addres-list">
-                            <li class="addres-list-item"><svg width="15" height="15"><use href="./symbol-defs.svg#envelope"></use></svg> test@test.ua</li>
-                            <li class="addres-list-item"><svg width="15" height="15"><use href="./symbol-defs.svg#call"></use></svg> +3 8096 555 66 99</li>
-                            <li class="addres-list-item"><svg width="15" height="15"><use href="./symbol-defs.svg#map"></use></svg> Тернопіль вул С. Бандери</li>
+                            <li><a href="" class="addres-list-item"><svg width="15" height="15"><use href="./symbol-defs.svg#envelope"></use></svg> test@test.ua</a></li>
+                            <li><a href="" class="addres-list-item"><svg width="15" height="15"><use href="./symbol-defs.svg#call"></use></svg> +3 8096 555 66 99</a></li>
+                            <li><a href="" class="addres-list-item"><svg width="15" height="15"><use href="./symbol-defs.svg#map"></use></svg> Тернопіль вул С. Бандери</a></li>
                         </ul>
 
                     </address>
@@ -251,41 +279,43 @@
 
                 <li class="footer-list-item">
 
-                    <h5 class="footer-list-tile">Основні посилання</h5>
+                    <h5 class="footer-list-item-tile">Основні посилання</h5>
 
                     <ul class="footer-list-second">
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Головна</li>
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Наші проекти</li>
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Наші послуги</li>
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Контакти</li>
+                        <li><a href="./index.html" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Головна</a></li>
+                        <li><a href="#projects" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Наші проекти</a></li>
+                        <li><a href="#apps" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Наші послуги</a></li>
+                        <li><a href="" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Контакти</a></li>
                     </ul>
                 </li>
 
                 <li class="footer-list-item">
 
-                    <h5 class="footer-list-tile">Наші проекти</h5>
+                    <h5 class="footer-list-item-tile">Наші проекти</h5>
 
                     <ul class="footer-list-second">
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Укрпошта</li>
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Нафтогаз</li>
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Львівська пивоварня</li>
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> ТЭЦ Калуша</li>
+                        <li><a href="https://www.ukrposhta.ua/ua" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Укрпошта</a></li>
+                        <li><a href="https://gas.ua/uk/home" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Нафтогаз</a></li>
+                        <li><a href="https://lvivarnya.com.ua/" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Львівська пивоварня</a></li>
+                        <li><a href="https://www.ua-region.com.ua/25824848" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> ТЭЦ Калуша</a></li>
                     </ul>
                 </li>
 
                 <li class="footer-list-item">
 
-                    <h5 class="footer-list-tile">Соціальні мережі</h5>
+                    <h5 class="footer-list-item-tile">Соціальні мережі</h5>
 
                     <ul class="footer-list-second">
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> LinkedIn</li>
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Instagram</li>
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Facebook</li>
-                        <li class="footer-list-second-item"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Twitter</li>
+                        <li><a href="https://ua.linkedin.com/" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Instagram</a></li>
+                        <li><a href="https://www.facebook.com/?locale=uk_UA" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Facebook</a></li>
+                        <li><a href="https://twitter.com/?lang=uk" class="footer-list-second-item" target="_blank"><svg width="10" height="10"><use href="./symbol-defs.svg#arrow"></use></svg> Twitter</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </footer>
+
+    <script defer src="./mobile.js"></script>
 </body>
 </html>

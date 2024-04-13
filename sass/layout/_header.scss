@@ -15,24 +15,117 @@ header {
                 padding-bottom: 40px;
                 position: relative;
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    margin-top: -2px;
-                    top: 100%;
-                    left: 0;
-                    width: 100%;
-                    height: 2px;
-                    background-color: transparent;
-                    border-radius: 2px;
-                    transition: all 250ms;
-                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-                }
-                &:hover::after, 
-                .nav-list-link.active::after {
-                    background-color: $white-color;
-                }
+            }
+            &-link::after {
+                content: "";
+                position: absolute;
+                margin-top: -2px;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: transparent;
+                border-radius: 2px;
+                transition: all 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            &-link:hover::after, 
+            .nav-list-link.active::after {
+                background-color: $white-color;
+            }
+            .active {
+                color: $white-color;
             }
         }
+    }
+}
+.menu-container {
+    display: none;
+}
+.menu-toggle {
+    display: none;
+}
+
+@include phone(767px) {
+    header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .nav {
+            display: none;
+        }
+        .menu-toggle {
+            display: block;
+            background: none;
+            margin: 10px;
+        }
+    
+        .menu-container {
+            @include flex(flex, flex-start, flex-start, 25px);
+            flex-direction: column;
+            // display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            padding: 25px;
+            background-color: white;
+            z-index: 999;
+          
+            transform: translateX(100%);
+            transition: transform 250ms ease-in-out;
+    
+            .mobile-menu {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                .link {
+                    @include property(32px, 600, Montserrat, $main-color);
+                    display: block;
+                    margin-bottom: 20px;
+                    transition: all 0.5s;
+                    &:hover {
+                        color: $hover-color;
+                    }
+                }
+                .active {
+                    @include property(46px, 700, Montserrat, $hover-color);
+                }
+              }
+    
+          }
+          .menu-container.is-open {
+            transform: translateX(0);
+          }
+          .menu-container .menu-toggle {
+
+            align-self: flex-end;
+          }
+          .menu-toggle {
+            @include flex(flex, center, center, _);
+            background-color: white;
+            padding: 2px;
+            min-height: 40px;
+            min-width: 40px;
+            padding: 0;
+            background-color: transparent;
+            cursor: pointer;
+            border: none;
+            border-radius: 50%;
+            outline: none;
+        }
+    }
+}
+
+@include tab (768px) {
+    header {
+        padding-right: 20px;
+    }
+}
+
+@include desc(1200px) {
+    header {
+        padding-right: 0;
     }
 }

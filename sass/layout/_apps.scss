@@ -88,3 +88,10 @@
         }
     }
 }
+
+@include desc(1200px) {
+    .apps-desc {
+        margin-top: 32px;
+        margin-bottom: 70px;
+    }
+}

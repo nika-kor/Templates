@@ -496,6 +496,12 @@ header .nav-list .active {
         flex-wrap: wrap;
   }
 }
+@media screen and (min-width: 1200px) {
+  .apps-desc {
+    margin-top: 32px;
+    margin-bottom: 70px;
+  }
+}
 .high {
   padding-top: 100px;
   padding-bottom: 70px;

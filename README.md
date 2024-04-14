@@ -1,6 +1,6 @@
-# antools# Currency-Converter App
+# Tenplates# Currency-Converter App
 
-### [Site link](https://nika-kor.github.io/antools/)
+### [Site link](https://nika-kor.github.io/Templates/)
 
 Layout supports mobile version up to 478px and desktop up to 1440px
 

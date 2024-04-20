@@ -13,11 +13,11 @@
     }
     &-desc {
         @include property(16px, 400, Montserrat, $desc-color);
+        margin: 0 auto;
         margin-top: 32px;
         margin-bottom: 70px;
         max-width: 730px;
         width: 100%;
-        margin: 0 auto;
     }
 
     &-list {

@@ -366,11 +366,11 @@ header .nav-list .active {
   font-weight: 400;
   font-family: Montserrat;
   color: #999999;
+  margin: 0 auto;
   margin-top: 32px;
   margin-bottom: 70px;
   max-width: 730px;
   width: 100%;
-  margin: 0 auto;
 }
 .apps-list {
   display: -webkit-box;
@@ -662,6 +662,7 @@ header .nav-list .active {
   max-width: 350px;
   width: 100%;
   margin-top: 70px;
+  counter-reset: zero 0;
 }
 .works-list .works-list-item-img {
   max-width: 350px;
@@ -676,12 +677,13 @@ header .nav-list .active {
   color: #323232;
   margin-top: 25px;
   margin-bottom: 25px;
+  counter-increment: custom-counter;
 }
-.works-list .works-list-item-title .span {
-  font-size: 18px;
-  font-weight: 600;
-  font-family: Montserrat;
-  color: #4985FF;
+.works-list .works-list-item-title::before {
+  content: counter(zero) counter(mycounter) ".";
+  counter-increment: mycounter;
+  color: #4985ff;
+  margin-right: 3px;
 }
 .works-list .works-list-item-desc {
   font-size: 16px;
